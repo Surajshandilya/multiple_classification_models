@@ -1,4 +1,5 @@
 #2026aj0529 - Suraj Shandil
+
 # Online shopper purchase prediction
 
 ## a. Problem statement
@@ -52,7 +53,7 @@ Page counts, durations, rates, page value, and special-day closeness are numeric
 
 Replace this line with the public repository URL after you push this folder:
 
-`https://github.com/<your-username>/<your-repo-name>`
+`https://github.com/Surajshandilya/multiple_classification_models`
 
 The repository root contains:
 
