@@ -1,0 +1,105 @@
+{
+  "dataset": "Online Shoppers Purchasing Intention (UCI)",
+  "rows": 12330,
+  "feature_count": 17,
+  "purchase_rate": 0.15474452554744525,
+  "test_size": 0.2,
+  "random_state": 42,
+  "positive_class": "Revenue = 1 (session ended in a purchase)",
+  "metric_definitions": {
+    "Precision": "purchase class",
+    "Recall": "purchase class",
+    "F1": "purchase class",
+    "AUC": "ROC AUC using the purchase-class score",
+    "MCC": "Matthews correlation coefficient"
+  },
+  "models": [
+    {
+      "name": "Logistic Regression",
+      "file": "logistic_regression.joblib",
+      "scale_numeric": true,
+      "best_params": {
+        "classifier__C": 0.1
+      },
+      "cv_f1": 0.6211402031337722,
+      "test_metrics": {
+        "Accuracy": 0.8450932684509327,
+        "AUC": 0.8949073469264704,
+        "Precision": 0.5,
+        "Recall": 0.7382198952879581,
+        "F1": 0.5961945031712473,
+        "MCC": 0.5193777217410469
+      }
+    },
+    {
+      "name": "Decision Tree",
+      "file": "decision_tree.joblib",
+      "scale_numeric": false,
+      "best_params": {
+        "classifier__max_depth": 6,
+        "classifier__min_samples_leaf": 10
+      },
+      "cv_f1": 0.6258513444160346,
+      "test_metrics": {
+        "Accuracy": 0.8491484184914841,
+        "AUC": 0.9096368743154022,
+        "Precision": 0.5079872204472844,
+        "Recall": 0.8324607329842932,
+        "F1": 0.6309523809523809,
+        "MCC": 0.5691994973028532
+      }
+    },
+    {
+      "name": "KNN",
+      "file": "knn.joblib",
+      "scale_numeric": true,
+      "best_params": {
+        "classifier__n_neighbors": 5,
+        "classifier__weights": "distance"
+      },
+      "cv_f1": 0.48608450588366026,
+      "test_metrics": {
+        "Accuracy": 0.8746958637469586,
+        "AUC": 0.7654505532051733,
+        "Precision": 0.6682027649769585,
+        "Recall": 0.3795811518324607,
+        "F1": 0.48414023372287146,
+        "MCC": 0.44067212610990675
+      }
+    },
+    {
+      "name": "Naive Bayes",
+      "file": "naive_bayes.joblib",
+      "scale_numeric": false,
+      "best_params": {
+        "classifier__alpha": 5.0
+      },
+      "cv_f1": 0.5935186916157953,
+      "test_metrics": {
+        "Accuracy": 0.8751013787510138,
+        "AUC": 0.7180160987227543,
+        "Precision": 0.5994623655913979,
+        "Recall": 0.5837696335078534,
+        "F1": 0.5915119363395226,
+        "MCC": 0.5178712283716664
+      }
+    },
+    {
+      "name": "Support Vector Machine",
+      "file": "support_vector_machine.joblib",
+      "scale_numeric": true,
+      "best_params": {
+        "classifier__C": 0.1
+      },
+      "cv_f1": 0.6046348747320156,
+      "test_metrics": {
+        "Accuracy": 0.8402270884022709,
+        "AUC": 0.8889582558712101,
+        "Precision": 0.48947368421052634,
+        "Recall": 0.7303664921465969,
+        "F1": 0.5861344537815126,
+        "MCC": 0.5070068599454292
+      }
+    }
+  ]
+}
